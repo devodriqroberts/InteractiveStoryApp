@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xUZ-nc-wBA">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InteractiveStoryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beginning" translatesAutoresizingMaskIntoConstraints="NO" id="qSo-Ck-EW9">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW4-8s-gtK">
+                                <rect key="frame" x="116" y="700" width="143" height="30"/>
+                                <state key="normal" title="Start Your Adventure"/>
+                                <connections>
+                                    <segue destination="CDt-eW-Hqa" kind="show" identifier="startAdventure" id="FK8-ik-aJN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmU-AB-8FU">
+                                <rect key="frame" x="24" y="630" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sa7-fR-bH0"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TW4-8s-gtK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4kS-eD-3id"/>
+                            <constraint firstItem="PmU-AB-8FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="585-4Y-7Aw"/>
+                            <constraint firstItem="PmU-AB-8FU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="7CW-0A-obS"/>
+                            <constraint firstItem="TW4-8s-gtK" firstAttribute="top" secondItem="PmU-AB-8FU" secondAttribute="bottom" constant="40" id="DKp-Aa-Fyo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qSo-Ck-EW9" secondAttribute="trailing" id="GaN-KM-f7w"/>
+                            <constraint firstItem="qSo-Ck-EW9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gca-uL-ZtX"/>
+                            <constraint firstItem="qSo-Ck-EW9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MXK-KF-Vtj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qSo-Ck-EW9" secondAttribute="bottom" id="SCh-6M-Sj1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TW4-8s-gtK" secondAttribute="bottom" constant="48" id="ckS-R9-bSy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PmU-AB-8FU" secondAttribute="trailing" constant="24" id="oiy-aE-aZe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0oh-g0-0Fo"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="PmU-AB-8FU" id="CGW-SF-wVi"/>
+                        <outlet property="textFieldBottomContraint" destination="DKp-Aa-Fyo" id="nRv-uU-lJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="791"/>
+        </scene>
+        <!--Page Controller-->
+        <scene sceneID="Bj0-g7-KdE">
+            <objects>
+                <viewController id="CDt-eW-Hqa" customClass="PageController" customModule="InteractiveStoryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jp5-jd-6X1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9Um-ZZ-MkF"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eiZ-i6-2co" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="791"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ydB-P7-U6w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xUZ-nc-wBA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFB-sT-ppz">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wp8-1Y-7SI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E52-Qr-cBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="256.80000000000001" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Beginning" width="320" height="568"/>
+    </resources>
+</document>
